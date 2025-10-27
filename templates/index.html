@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Airport Route Finder</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Airport Route Finder</h1>
+            <p class="subtitle">Find the shortest flight path between airports worldwide</p>
+        </header>
+        
+        <div class = mainpart>
+            <div class="card">
+                <form id="routeForm">
+                    <div class="form-group">
+                        <label for="start">From:</label>
+                        <select id="start">
+                            {% for airport in airports %}
+                            <option value="{{ airport.code }}">{{ airport.name }} ({{ airport.code }})</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label for="end">To:</label>
+                        <select id="end">
+                            {% for airport in airports %}
+                            <option value="{{ airport.code }}">{{ airport.name }} ({{ airport.code }})</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <button type="submit">
+                        <i class="fas fa-route"></i>
+                        Find Shortest Route
+                    </button>
+                </form>
+                <div id="result"></div>
+            </div>
+
+            
+        
+            <div id="map"></div>   
+        </div>
+            
+       
+
+    <script>
+        const airportData = {{ airports | tojson }};
+    </script>
+
+    <script src="{{ url_for('static', filename='JS/script.js') }}"></script>
+    
+    
+</body>
+</html>

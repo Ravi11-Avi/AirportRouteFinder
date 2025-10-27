@@ -1,0 +1,56 @@
+[
+    {
+        "code": "DEL",
+        "name": "Indira Gandhi International Airport",
+        "lat": 28.5562,
+        "lon": 77.1000,
+        "connections": {
+            "BOM": 1400,
+            "CCU": 1300,
+            "BLR": 1700
+        }
+    },
+    {
+        "code": "BOM",
+        "name": "Chhatrapati Shivaji Maharaj International Airport",
+        "lat": 19.0896,
+        "lon": 72.8656,
+        "connections": {
+            "DEL": 1400,
+            "BLR": 980,
+            "HYD": 620
+        }
+    },
+    {
+        "code": "BLR",
+        "name": "Kempegowda International Airport",
+        "lat": 13.1986,
+        "lon": 77.7066,
+        "connections": {
+            "DEL": 1700,
+            "BOM": 980,
+            "HYD": 500
+        }
+    },
+    {
+        "code": "HYD",
+        "name": "Rajiv Gandhi International Airport",
+        "lat": 17.2403,
+        "lon": 78.4294,
+        "connections": {
+            "BOM": 620,
+            "BLR": 500,
+            "CCU": 1500
+        }
+    },
+    {
+        "code": "CCU",
+        "name": "Netaji Subhas Chandra Bose International Airport",
+        "lat": 22.6547,
+        "lon": 88.4467,
+        "connections": {
+            "DEL": 1300,
+            "HYD": 1500
+        }
+    }
+]
